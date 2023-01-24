@@ -10,7 +10,8 @@ import { Observable } from 'rxjs';
 export class AppComponent {
 
   todos$: Observable<any>;  //Observable ist eine Veriable, die sich updated
-  todos:Array<any>;
+  todos: Array<any>;
+  todotext = '';
 
   constructor(firestore: Firestore) {
     const coll = collection(firestore, 'Todos');
@@ -20,6 +21,10 @@ export class AppComponent {
       console.log('Neue Todos sind:', newTodos);
       this.todos = newTodos;
     });
+
+  }
+
+  addTodo() {
 
   }
 
