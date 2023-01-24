@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-todo-c6f9e": {
+      "hosting": {
+        "firebase-todo": [
+          "fir-todo-c6f9e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-todo-c6f9e"
+  }
+}
