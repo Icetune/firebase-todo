@@ -10,12 +10,15 @@ import { Observable } from 'rxjs';
 export class AppComponent {
 
   todos$: Observable<any>;  //Observable ist eine Veriable, die sich updated
+  todos:Array<any>;
+
   constructor(firestore: Firestore) {
     const coll = collection(firestore, 'todos');
     this.todos$ = collectionData(coll);
 
     this.todos$.subscribe((newTodos) => {
-      console.log('Neue Todos sind:', newTodos)
+      console.log('Neue Todos sind:', newTodos);
+      this.todos = newTodos;
     });
 
   }
