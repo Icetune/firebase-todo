@@ -13,7 +13,7 @@ export class AppComponent {
   todos:Array<any>;
 
   constructor(firestore: Firestore) {
-    const coll = collection(firestore, 'todos');
+    const coll = collection(firestore, 'Todos');
     this.todos$ = collectionData(coll);
 
     this.todos$.subscribe((newTodos) => {
